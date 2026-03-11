@@ -1,0 +1,400 @@
+{
+  "info": {
+    "_postman_id": "2cfef8be-f1d0-4d53-a6b0-1a50502e1853",
+    "name": "Notes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53087578",
+    "_collection_link": "https://go.postman.co/collection/53087578-2cfef8be-f1d0-4d53-a6b0-1a50502e1853?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "User Register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        },
+        "description": "User registered → password got hashed and saved to DB"
+      },
+      "response": []
+    },
+    {
+      "name": "User Log in ",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        },
+        "description": "User logged in → password was verified against the hash\r\nServer returned a JWT token — this token will be sent with every future request to prove who you are"
+      },
+      "response": []
+    },
+    {
+      "name": "Testing Notes",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is my first note content\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all Notes",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Note",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/notes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update a Note",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Updated title\",\r\n  \"content\": \"Updated content\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/notes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete a Note",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/notes/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register an Admin User",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"username\": \"adminuser\",\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"admin123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        },
+        "description": "After this we have to manually set the role to admin in the database. In VS Code terminal run:\r\nnode -e \"const db = require('./config/database'); db.prepare('UPDATE users SET role = ? WHERE email = ?').run('admin', 'admin@example.com'); console.log('Done!');\""
+      },
+      "response": []
+    },
+    {
+      "name": "Login as Admin",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"admin123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        },
+        "description": "Token generation"
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Notes as an Admin",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMTgzMDA4LCJleHAiOjE3NzMyNjk0MDh9.gyT3_joh0KBa0JYd7hYYV4qqMKBwnNt-3dx4NY4lHZo",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "admin",
+            "notes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Note",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Test note for admin\",\r\n  \"content\": \"Admin should be able to see this\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/notes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Admin- Delete any note",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMTgzMDA4LCJleHAiOjE3NzMyNjk0MDh9.gyT3_joh0KBa0JYd7hYYV4qqMKBwnNt-3dx4NY4lHZo",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/admin/notes/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "admin",
+            "notes",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
