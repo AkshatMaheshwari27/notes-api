@@ -15,13 +15,34 @@ const createNote = (req, res) => {
   res.status(201).json({ message: 'Note created successfully', noteId: result.lastInsertRowid });
 };
 
-// GET all notes for logged in user
+// GET all notes for logged in user (with search and pagination)
 const getNotes = (req, res) => {
-  const notes = db.prepare(
-    'SELECT * FROM notes WHERE user_id = ?'
-  ).all(req.user.id);
+  const { search, page = 1, limit = 5 } = req.query;
+  const offset = (page - 1) * limit;
 
-  res.json(notes);
+  let query = 'SELECT * FROM notes WHERE user_id = ?';
+  let countQuery = 'SELECT COUNT(*) as total FROM notes WHERE user_id = ?';
+  const params = [req.user.id];
+
+  if (search) {
+    query += ' AND title LIKE ?';
+    countQuery += ' AND title LIKE ?';
+    params.push(`%${search}%`);
+  }
+
+  query += ' LIMIT ? OFFSET ?';
+  const notes = db.prepare(query).all(...params, parseInt(limit), parseInt(offset));
+  const total = db.prepare(countQuery).get(...params).total;
+
+  res.json({
+    notes,
+    pagination: {
+      total,
+      page: parseInt(page),
+      limit: parseInt(limit),
+      totalPages: Math.ceil(total / limit)
+    }
+  });
 };
 
 // GET a single note

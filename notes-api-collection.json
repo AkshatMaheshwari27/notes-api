@@ -17,7 +17,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"username\": \"testuser\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "raw": "{\r\n  \"username\": \"testuser3\",\r\n  \"email\": \"test3@example.com\",\r\n  \"password\": \"password123\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -50,7 +50,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "raw": "{\r\n  \"email\": \"test3@example.com\",\r\n  \"password\": \"password123\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -83,13 +83,13 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMyNTMxNjksImV4cCI6MTc3MzMzOTU2OX0.yWxv6esWRb-0vQVu_ELRDP8QoQWR1FPGop161SFAdvo",
             "type": "text"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"title\": \"My first note\",\r\n  \"content\": \"This is my first note content\"\r\n}",
+          "raw": "{\r\n  \"title\": \"My second note\",\r\n  \"content\": \"This is my second note content\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -120,7 +120,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMyNTMxNjksImV4cCI6MTc3MzMzOTU2OX0.yWxv6esWRb-0vQVu_ELRDP8QoQWR1FPGop161SFAdvo",
             "type": "text"
           }
         ],
@@ -148,12 +148,12 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMyNTMxNjksImV4cCI6MTc3MzMzOTU2OX0.yWxv6esWRb-0vQVu_ELRDP8QoQWR1FPGop161SFAdvo",
             "type": "text"
           }
         ],
         "url": {
-          "raw": "http://localhost:3000/notes/1",
+          "raw": "http://localhost:3000/notes/5",
           "protocol": "http",
           "host": [
             "localhost"
@@ -161,7 +161,7 @@
           "port": "3000",
           "path": [
             "notes",
-            "1"
+            "5"
           ]
         }
       },
@@ -177,13 +177,13 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMyNTMxNjksImV4cCI6MTc3MzMzOTU2OX0.yWxv6esWRb-0vQVu_ELRDP8QoQWR1FPGop161SFAdvo",
             "type": "text"
           }
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"title\": \"Updated title\",\r\n  \"content\": \"Updated content\"\r\n}",
+          "raw": "{\r\n  \"title\": \"Updated new title\",\r\n  \"content\": \"Updated new content\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -191,7 +191,7 @@
           }
         },
         "url": {
-          "raw": "http://localhost:3000/notes/1",
+          "raw": "http://localhost:3000/notes/5",
           "protocol": "http",
           "host": [
             "localhost"
@@ -199,7 +199,7 @@
           "port": "3000",
           "path": [
             "notes",
-            "1"
+            "5"
           ]
         }
       },
@@ -215,12 +215,12 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMyNTMxNjksImV4cCI6MTc3MzMzOTU2OX0.yWxv6esWRb-0vQVu_ELRDP8QoQWR1FPGop161SFAdvo",
             "type": "text"
           }
         ],
         "url": {
-          "raw": "http://localhost:3000/notes/1",
+          "raw": "http://localhost:3000/notes/5",
           "protocol": "http",
           "host": [
             "localhost"
@@ -228,7 +228,7 @@
           "port": "3000",
           "path": [
             "notes",
-            "1"
+            "5"
           ]
         }
       },
@@ -244,7 +244,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"username\": \"adminuser\",\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"admin123\"\r\n}",
+          "raw": "{\r\n  \"username\": \"adminuser1\",\r\n  \"email\": \"admin1@example.com\",\r\n  \"password\": \"admin123\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -277,7 +277,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"admin123\"\r\n}",
+          "raw": "{\r\n  \"email\": \"admin1@example.com\",\r\n  \"password\": \"admin123\"\r\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -310,7 +310,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMTgzMDA4LCJleHAiOjE3NzMyNjk0MDh9.gyT3_joh0KBa0JYd7hYYV4qqMKBwnNt-3dx4NY4lHZo",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMjU0OTgyLCJleHAiOjE3NzMzNDEzODJ9.V3wFXc1OXJBQFa6KOrMGoYK4CMSZ_eU66PNFO9UXhWs",
             "type": "text"
           }
         ],
@@ -339,7 +339,7 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMjU0OTgyLCJleHAiOjE3NzMzNDEzODJ9.V3wFXc1OXJBQFa6KOrMGoYK4CMSZ_eU66PNFO9UXhWs",
             "type": "text"
           }
         ],
@@ -376,12 +376,12 @@
         "header": [
           {
             "key": "Authorization",
-            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMTgzMDA4LCJleHAiOjE3NzMyNjk0MDh9.gyT3_joh0KBa0JYd7hYYV4qqMKBwnNt-3dx4NY4lHZo",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzczMjU0OTgyLCJleHAiOjE3NzMzNDEzODJ9.V3wFXc1OXJBQFa6KOrMGoYK4CMSZ_eU66PNFO9UXhWs",
             "type": "text"
           }
         ],
         "url": {
-          "raw": "http://localhost:3000/admin/notes/2",
+          "raw": "http://localhost:3000/admin/notes/6",
           "protocol": "http",
           "host": [
             "localhost"
@@ -390,7 +390,112 @@
           "path": [
             "admin",
             "notes",
-            "2"
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Pagination",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/notes?page=1&limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Search",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/notes?search=second",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "second"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Test Both Pagination and Search Together",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJpYXQiOjE3NzMxNzk2NzgsImV4cCI6MTc3MzI2NjA3OH0.5jEoyfUd-HW6SOTKTXnDiTkdj0rQbTEojtabQL2ehK0",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/notes?search=second&page=1&limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "notes"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "second"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
           ]
         }
       },
